@@ -1,19 +1,18 @@
 # Cyclops Vehicle Upgrade Console
 
-This mod places the vanilla vehicle upgrade console inside the Cyclops automatically, so you do not need to craft or place it manually.
+This mod adds a buildable vehicle upgrade console that you can place manually with the Habitat Builder, including inside mobile vehicles like the Cyclops.
 
 ## What it does
 
-- Hooks Cyclops startup with Harmony.
-- Loads the vanilla vehicle upgrade console prefab.
-- Anchors it to the Cyclops vehicle docking bay when that bay is present.
-- Watches the Cyclops bay and logs which vehicle is docked there.
-- Uses a marker component so each Cyclops only gets one copy.
+- Registers a custom buildable based on the vanilla moonpool vehicle upgrade console.
+- Adds it to the Habitat Builder Interior Modules category.
+- Enables build placement inside bases and submarines (Cyclops support).
+- Uses the Seamoth upgrades crafting tree once built.
 
 ## Notes
 
-- The local offset and rotation are in `Plugin.cs`.
-- If the console appears slightly off from the docking-bay panel, adjust `DefaultLocalOffset` and `DefaultLocalEuler`.
+- Recipe and placement flags are in `Plugin.cs`.
+- The console is no longer auto-spawned on Cyclops start.
 - I could not compile the project in this environment because the .NET SDK is not installed here.
 
 ## Build
